@@ -15,14 +15,15 @@ public class RouteValidator {
     );
 
     public Predicate<ServerHttpRequest> isSecured = serverHttpRequest -> {
-        String path = serverHttpRequest.getURI().getPath();
+        return false;
+        // String path = serverHttpRequest.getURI().getPath();
 
-        if (path.startsWith("/api/v1/room-service") || path.startsWith("/api/v1/booking-service") || path.startsWith("/api/v1/review-service")
-                && serverHttpRequest.getMethod() == HttpMethod.GET) {
-            return false;
-        }
+        // if (path.startsWith("/api/v1/room-service") || path.startsWith("/api/v1/booking-service") || path.startsWith("/api/v1/review-service")
+        //         && serverHttpRequest.getMethod() == HttpMethod.GET) {
+        //     return false;
+        // }
 
-        return openApiEndpoints.stream()
-                .noneMatch(uri-> serverHttpRequest.getURI().getPath().contains(uri));
+        // return openApiEndpoints.stream()
+        //         .noneMatch(uri-> serverHttpRequest.getURI().getPath().contains(uri));
     };
 }
