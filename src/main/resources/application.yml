@@ -35,14 +35,14 @@ spring:
             - AuthenticationFilter
             
         - id: ROOM-SERVICE
-          uri: http://ec2-35-174-41-226.compute-1.amazonaws.com:8086
+          uri: http://room-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/room-service/**
           filters:
             - AuthenticationFilter
             
         - id: ORGANIZATION-SERVICE
-          uri: http://ec2-35-174-41-226.compute-1.amazonaws.com:8085
+          uri: http://organization-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/organization-service/**
           filters:
@@ -70,7 +70,7 @@ spring:
             - AuthenticationFilter
             
         - id: REVIEW-SERVICE
-          uri: http://ec2-35-174-41-226.compute-1.amazonaws.com:8088
+          uri: http://review-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/review-service/**
           filters:
