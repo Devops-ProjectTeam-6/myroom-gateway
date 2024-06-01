@@ -28,7 +28,7 @@ spring:
             - AuthenticationFilter
             
         - id: BOOKING-SERVICE
-          uri: booking-service.bef24bd.kyma.ondemand.com
+          uri: http://booking-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/booking-service/**
           filters:
