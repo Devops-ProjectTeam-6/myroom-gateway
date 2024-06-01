@@ -28,7 +28,7 @@ spring:
             - AuthenticationFilter
             
         - id: BOOKING-SERVICE
-          uri: http://54.196.65.193:8082
+          uri: http://booking-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/booking-service/**
           filters:
@@ -49,7 +49,7 @@ spring:
             - AuthenticationFilter
             
         - id: ONBOARDING-SERVICE
-          uri: http://54.196.65.193:8083
+          uri: http://onboarding-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/onboarding/**
           filters:
@@ -63,7 +63,7 @@ spring:
             - AuthenticationFilter
             
         - id: PAYMENT-SERVICE
-          uri: http://54.196.65.193:8084
+          uri: http://payment-service.bef24bd.kyma.ondemand.com
           predicates:
             - Path=/api/v1/payment-service/**
           filters:
